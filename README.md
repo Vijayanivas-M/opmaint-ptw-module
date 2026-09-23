@@ -36,3 +36,6 @@ Create a `.env` file in the `/backend` directory and add your connection string.
 *(Note: Ensure reserved URL characters in passwords like `?` or `/` are percent-encoded)*
 ```env
 DATABASE_URL="postgresql://postgres.[YOUR_PROJECT]:[YOUR_PASSWORD]@[aws-0-eu-central-1.pooler.supabase.com:6543/postgres](https://aws-0-eu-central-1.pooler.supabase.com:6543/postgres)"
+```
+
+
