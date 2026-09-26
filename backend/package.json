@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsx index.ts",
+    "start": "node --import tsx/esm index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
