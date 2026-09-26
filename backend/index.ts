@@ -42,8 +42,9 @@ app.get('/test-db', async (req, res) => {
             serverTime: result.rows[0].now
         });
     } catch (error) {
+        const errMsg = error instanceof Error ? error.message : String(error);
         console.error('Database connection error:', error);
-        res.status(500).json({ error: 'Failed to connect to the database' });
+        res.status(500).json({ error: 'Failed to connect to the database', detail: errMsg });
     }
 });
 
