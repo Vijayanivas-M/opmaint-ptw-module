@@ -8,7 +8,13 @@ import { createPermitsRouter } from './routes/permits.js';
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:5173',          // local dev
+    /\.vercel\.app$/,                  // any Vercel preview/prod URL
+  ],
+  credentials: true,
+}));
 app.use(express.json());
 
 // Set up the PostgreSQL connection pool
