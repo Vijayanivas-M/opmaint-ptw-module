@@ -20,6 +20,9 @@ app.use(express.json());
 // Set up the PostgreSQL connection pool
 const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
+    ssl: {
+        rejectUnauthorized: false, // Required for Supabase on cloud hosts
+    },
 });
 
 // Mount API routes
