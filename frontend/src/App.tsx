@@ -165,7 +165,7 @@ function PermitDashboard() {
       try {
         setLoading(true)
         setError(null)
-        const res = await fetch(`http://${window.location.hostname}:3000/api/permits`, {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/permits`, {
           signal: controller.signal,
         })
         if (!res.ok) {

@@ -52,7 +52,7 @@ export default function CreatePermitForm() {
     };
 
     try {
-      const response = await fetch(`http://${window.location.hostname}:3000/api/permits/hot-work`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/permits/hot-work`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
